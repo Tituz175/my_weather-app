@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Weather App</title>
+</head>
+
+<body>
+    <div class="container my-5 mx-auto text-gray-500">
+
+        <h1 class="text-muted text-center my-4 text-4xl font-semibold mt-12 mb-4">Weather Ninja</h1>
+
+        <form class="change-location my-4 text-center">
+            <label for="city">Enter a location for weather information</label>
+            <input type="text" name="city" class="w-full rounded-md border-2 p-4 outline-none mt-2">
+        </form>
+
+        <div class="card shadow-2xl rounded-md overflow-hidden hidden mt-0">
+            <img src="" class="time card-img-top mb-0">
+            <div class="relative">
+                <div class="icon w-full text-center bg-white mx-auto shadow-2xl">
+                    <!-- icon here later -->
+                    <img class="mx-auto" src="" alt="" srcset="">
+                </div>
+                <div class="bg-white uppercase text-center details mt-0">
+                    <h5 class="font-semibold text-xl py-2">City name</h5>
+                    <div class="my-2">Country</div>
+                    <div class="my-2">Weather condition</div>
+                    <div class="text-6xl font-light pt-4 pb-8">
+                        <span>temp</span>
+                        <span>&deg;C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="scripts/forecast.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
