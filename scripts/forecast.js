@@ -1,5 +1,6 @@
 class Forecast {
   constructor() {
+    // the api key
     this.key = "c5YWAA9t6JrAcP5gS0SNFkxp2nSAPz5V";
     this.weatherURI =
       "http://dataservice.accuweather.com/currentconditions/v1/";
@@ -30,12 +31,3 @@ class Forecast {
     return data[0];
   }
 }
-
-// the api key
-// const key = ;
-
-// 
-// const getWeather = async (cityId) => {};
-
-// 
-// const getCity = async (city) => {};

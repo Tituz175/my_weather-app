@@ -25,6 +25,7 @@ const updateUi = ({ cityDetails, cityWeather }) => {
   details.innerHTML = `
     <h5 class="font-semibold text-xl pt-16 pb-2">${cityDetails.EnglishName}</h5>
     <div class="my-2">${cityDetails.Country.EnglishName}</div>
+    <div class="my-2">${cityDetails.AdministrativeArea.EnglishName} ${cityDetails.AdministrativeArea.EnglishType}</div>
     <div class="my-2">${cityWeather.WeatherText}</div>
     <div class="text-6xl font-light pt-4 pb-8">
         <span>${cityWeather.Temperature.Metric.Value}</span>
@@ -39,7 +40,7 @@ cityForm.addEventListener("submit", (e) => {
 
   const city = cityForm.city.value.trim().toLowerCase();
   cityForm.reset();
-
+  // calls the updateCity method in the forecast class
   forecast
     .updateCity(city)
     .then((data) => updateUi(data))
@@ -49,6 +50,7 @@ cityForm.addEventListener("submit", (e) => {
   localStorage.setItem("city", city);
 });
 
+// checks the local storage for the last supplied city
 if (localStorage.getItem("city")) {
   forecast
     .updateCity(localStorage.getItem("city"))
