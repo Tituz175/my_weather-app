@@ -8,11 +8,6 @@ const forecast = new Forecast();
 
 // this function render the application ui
 const updateUi = ({ cityDetails, cityWeather }) => {
-  // adjust the card display property
-  card.classList.contains("hidden")
-    ? card.classList.remove("hidden")
-    : card.classList.remove("hidden");
-
   // set the icon image source attribute
   const iconSrc = `img/icons/${cityWeather.WeatherIcon}.svg`;
   icon.setAttribute("src", iconSrc);
@@ -32,6 +27,11 @@ const updateUi = ({ cityDetails, cityWeather }) => {
         <span>&deg;C</span>
     </div>
   `;
+  
+  // adjust the card display property
+  card.classList.contains("hidden")
+    ? card.classList.remove("hidden")
+    : card.classList.remove("hidden");
 };
 
 // this is the eventlistener submitting the form value
